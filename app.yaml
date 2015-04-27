@@ -1,5 +1,5 @@
 application: predictoapp
-version: 1
+version: 2
 runtime: php
 api_version: 1
 threadsafe: no
@@ -14,52 +14,8 @@ handlers:
   upload: .+\.(gif|png|jpg|css|js|html|eot|woff|ttf|svg|otf|xml|txt)$
   application_readable: true  
 
-- url: /admin/assets
-  static_dir: admin/assets
-
-- url: /admin
-  script: admin/index.php
-
-- url: /admin/(.+)
-  script: admin/index.php 
-
-- url: /myuploads
-  script: myuploads/index.php
-
-- url: /myuploads/(.+)
-  script: myuploads/index.php
-  
-- url: /showimage
-  script: showimage/index.php
-
-- url: /showimage/(.+)
-  script: showimage/index.php  
-
-- url: /uploadsuccess
-  script: uploadsuccess/index.php
-
-- url: /uploadsuccess/(.+)
-  script: uploadsuccess/index.php  
-
 - url: /.*
   script: index.php  
-
-- url: /BingSiteAuth.xml
-  static_files: BingSiteAuth.xml
-  upload: BingSiteAuth.xml
-  
-- url: /sitemap.xml
-  static_files: sitemap.xml
-  upload: sitemap.xml  
-
-- url: /robots.txt
-  static_files: robots.txt
-  upload: robots.txt    
-  
-- url: /googleeb491dfb6fb22923.html
-  static_files: googleeb491dfb6fb22923.html
-  upload: googleeb491dfb6fb22923.html
-  
 
 
 
